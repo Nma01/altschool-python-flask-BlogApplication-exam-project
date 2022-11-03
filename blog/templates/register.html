@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+<!-- Main Content-->
+{% block title %}Register Page{% endblock title %}
+{% block content %}
+<div class="container px-4 px-lg-5">
+    <section class="vh-100" style="background-color: #508bfc;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <h3 class="mb-5">Register</h3>
+                            <form action="" method="post">
+                                <div class="form-outline mb-4">
+                                    <input type="name" name="username" id="username-2"
+                                        class="form-control form-control-lg" />
+                                    <label class="form-label" for="username-2">Username</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="name" name="first_name" id="first_name"
+                                        class="form-control form-control-lg" />
+                                    <label class="form-label" for="first_name">First name</label>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input type="name" name="last_name" id="last_name"
+                                        class="form-control form-control-lg" />
+                                    <label class="form-label" for="last_name">Last name</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="email" name="email" id="typeEmailX-2"
+                                        class="form-control form-control-lg" />
+                                    <label class="form-label" for="typeEmailX-2">Email</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="password" name="password-1" id="typePasswordX-2"
+                                        class="form-control form-control-lg" />
+                                    <label class="form-label" for="typePasswordX-2">Password</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="password" name="password-2" id="typePasswordX-2"
+                                        class="form-control form-control-lg" />
+                                    <label class="form-label" for="typePasswordX-2">Confirm Password</label>
+                                </div>
+
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+
+                                <hr class="my-4">
+
+                        </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
+</div>

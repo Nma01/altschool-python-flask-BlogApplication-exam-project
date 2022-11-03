@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+<!-- Main Content-->
+{% block title %}Home Page{% endblock title %}
+{% block content %}
+<!-- Page Header-->
+
+<div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="post-heading">
+                <h1>{{ blog_post.title }}</h1>
+                <!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
+                <span class="meta">
+                    Posted by
+                    <a href="#!">{{ blog_post.user.first_name }} {{ blog_post.user.first_name }}</a>
+                    on {{ blog_post.date_created }}
+                </span>
+                <span class="meta">
+                    {% if current_user.id == blog_post.author %}
+                    <a href={{ url_for("views.delete_blog_post", blog_post_id=blog_post.id) }} class="btn btn-danger">Delete</a>
+                    <a href={{ url_for("views.edit_blog_post", blog_post_id=blog_post.id) }} class="btn btn-primary">Edit</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Post Content-->
+<article class="my-5">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                {{ blog_post.content }}
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+<!-- Main Content-->
+{% block content %}
+<div class="container px-4 px-lg-5">
+    <form method="post">
+        <div class="form-group my-4">
+          <label for="exampleFormControlInput1">Blog Title</label>
+          <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Your Blog Post Title">
+        </div>
+        
+        <div class="form-group my-4">
+          <label for="exampleFormControlTextarea1">Blog Content:</label>
+          <textarea name="content" class="form-control" placeholder="Your Blog Content" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <input type="submit" class="btn btn-primary my-2" value="Publish">
+      </form>
+</div>
+{% endblock content %}
